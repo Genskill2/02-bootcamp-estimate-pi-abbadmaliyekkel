@@ -1,5 +1,6 @@
 import math
 import unittest
+
 import random
 
 def wallis(n):
@@ -30,7 +31,8 @@ class TestWallis(unittest.TestCase):
             pi = wallis(i)
             self.assertTrue(abs(pi - math.pi) < 0.01, msg=f"Estimate with even {i} iterations is {pi} which is not accurate enough.\n")
 
-
+            
+           
 class TestMC(unittest.TestCase):
     def test_randomness(self):
         pi0 = monte_carlo(15000)
